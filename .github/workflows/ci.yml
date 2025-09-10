@@ -58,7 +58,5 @@ jobs:
     - name: Push Docker image to DockerHub
       working-directory: codebase/rdicidr-0.1.0
       run: |
-        # docker tag rdicidr:${{ github.sha }} ${{ secrets.DOCKERHUB_USERNAME }}/rdicidr:${{ github.sha }}
         docker tag rdicidr:${{ github.sha }} ${{ secrets.DOCKERHUB_USERNAME }}/rdicidr:latest
-        # docker push ${{ secrets.DOCKERHUB_USERNAME }}/rdicidr:${{ github.sha }}
         docker push ${{ secrets.DOCKERHUB_USERNAME }}/rdicidr:latest
