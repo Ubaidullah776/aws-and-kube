@@ -15,7 +15,7 @@ jobs:
                 node-version: [15.x]
 
         steps:
-        - name: Checkout repostiry
+        - name: Checkout code
           uses: actions/checkout@v4
 
         - name: Setup Node.js ${{ matrix.node-version}}
@@ -23,7 +23,7 @@ jobs:
           with:
             node-version: ${{ matrix.node-version }}
             cache: 'npm'
-            cache-dependency-path: code/rdicidr-0.1.0/package-lock.json
+            cache-dependency-path: codebase/rdicidr-0.1.0/package-lock.json
 
         - name: Install dependencies
           working-directory: codebase/rdicidr-0.1.0
